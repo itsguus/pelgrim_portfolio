@@ -1,6 +1,6 @@
-title: Pelgrim Portfolio
-description: De portfolio van Joppe Pelgrim
-url: /pelgrim_portfolio/
+title: Stageverslag
+description: Het stageverslag van Guus Groenink
+url: 
 
 
 defaults:
@@ -9,3 +9,14 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "page"
+  -
+    scope: 
+      path: "_projects" # an empty string here means all files in the project
+    values:
+      layout: "projects"
+      permalink: :title/
+
+
+collections:
+  projects:
+    output: true 

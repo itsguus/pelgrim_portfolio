@@ -13,8 +13,8 @@ defaults:
     scope: 
       path: "_projects" # an empty string here means all files in the project
     values:
-      layout: "projects"
-      permalink: :title/
+      layout: "project"
+      permalink: /:title/
 
 
 collections:

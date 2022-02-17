@@ -1,0 +1,211 @@
+{% assign data = include.data | sort: "title" %}
+
+{% assign allActivities = "" | split: "," %}
+
+{% for entry in data %}
+    {% for item in entry.activities %}
+        {% assign allActivities = allActivities | push: item %}
+    {% endfor %}
+{% endfor %}
+
+
+{% assign lastTimeData = allActivities | sort: "to" | reverse %}{% assign lastHour = lastTimeData[0].to | split: ":" %}{% assign lastHourHH = lastHour[0] | plus: 0 %}{% assign lastHourMM = lastHour[1] | plus: 0.0 %}
+{% assign firstTimeData = allActivities | sort: "from" %}{% assign firstHour = firstTimeData[0].from | split: ":" %}{% assign firstHourHH = firstHour[0] | plus: 0 %}{% assign firstHourMM = firstHour[1] | plus: 0.0 %} 
+
+{% assign ifToEnd = allActivities | where: "to", "00:00" %}{% if ifToEnd.size > 0%}{% assign lastHourHH = 24 %}{% endif %}
+{% assign blockWidth = 3.3%}
+{% assign minBlockHeight = 4.5 %}
+
+
+
+<div id="programblock">
+    <div class="top">
+        <fieldset>
+            <input checked type="checkbox" id="dropdown"><label for="dropdown" class="legend">Categorieën </label>
+            {% assign categories =  site.data.filters %}
+            <ul class="sub">
+            {% for item in categories %}
+                <li>
+                    <label for="{{ item.name_used_by_code }}" class="check">
+                        <input type="checkbox" id="{{ item.name_used_by_code }}" data-filter="filter_{{ item.name_used_by_code }}" data-filter-type="expand" onchange="filter();">
+                        <span>{{ item.title }}</span>
+                    </label>
+                </li>
+            {% endfor %}
+            </ul>
+        </fieldset>
+        <fieldset id="filter">
+            <legend><span>Programma</span> filters</legend>
+            <label for="free" class="check">
+                <input type="checkbox" id="free" data-filter="filter_free" data-filter-type="narrow" onchange="filter();">
+                <span>Gratis</span>
+            </label>
+            <label for="registration" class="check">
+                <input type="checkbox" id="registration" data-filter="filter_no_registration" data-filter-type="narrow" onchange="filter();">
+                <span>Geen registratie nodig</span>
+            </label>
+        </fieldset>
+        <h2>Donderdag 30 September 2021</h2>
+        <div class="buttonbox max_left">
+            <button onclick="scrollData('left')"></button>
+            <button onclick="scrollData('right')"></button>
+        </div>
+    </div>
+
+    <ul id="titles">
+        <li class="indicator">Hotels<br> (A-Z)</li>
+        {% for entry in data %}
+        <li id="{{ entry.title | slugify }}" class="hotelTitle" data-visible="true">
+            {% assign url = entry.title | downcase | replace: " ", "-" | replace: "&", "" %} 
+            <a href="/hotels/{{ url | replace: "'", "" | replace: "ö", "o" }}"><h2 {% if entry.title contains 'Conservatorium' %} class="no-margin" {% endif %}>{{ entry.title }}</h2></a>
+        </li>
+        {% assign tos = "" | split: "," %}
+        {% assign froms = "" | split: "," %}
+        {% endfor %}
+    </ul>
+
+
+    <div class="data hide--scrollbar">
+        <ul class="stickyTimes">
+            
+            {% assign lastHour = 24 %}
+            {% if firstHourMM > 0 %}{% assign firstHourHH = firstHourHH | minus: 1 %}{% endif %}
+            {% for i in (firstHourHH..lastHour) %}
+                {% assign hh = i  %}
+                {% if hh < 10  %}{% assign hh = hh | prepend: "0" %}{% endif %}
+                <li class="time">
+                    <span>{{ hh | replace: "24", "00" }}:00</span>
+                </li>        
+            {% endfor %}
+        </ul>
+        
+
+        {% for entry in data %}
+
+            {% assign rowFilters = "" | split:  ",'" %}
+            {% for item in entry.activities %}
+                {% assign tempFilters = "" | split:  ",'" %}
+                {% assign from = item.from | split: ":" %}{% assign fromHH = from[0] %}{% assign fromMM = from[1] %}
+                {% assign to = item.to | split: ":" %}{% assign toHH = to[0] %}{% assign toMM = to[1] %} 
+
+                {% if toHH == "00" %}
+                    {% assign toHH = 24 %}
+                    {% assign to[0] = 24 %}
+                {% endif %}
+
+                {% assign tempFilters = tempFilters | push: item.category  %}
+                {% unless item.registration_required %}{% assign tempFilters = tempFilters | push: "no_registration"  %}{% endunless %}
+                {% if item.cost == "0" %}{% assign tempFilters = tempFilters | push: "free"  %}{% endif %}
+                {% for filter in tempFilters %}
+                    {% unless rowFilters contains filter %}
+                        {% assign rowFilters = rowFilters | push: filter %}
+                    {% endunless %}
+                {% endfor %}
+            {% endfor %}
+
+            {% assign rowFilters = rowFilters | compact %}
+            <ul class="hotelRow {% for filter in rowFilters %}filter_{{ filter }} {% endfor %}" data-hotel="{{ entry.title || slugify }}">
+                {% for item in entry.activities %}
+                    {% assign from = item.from | split: ":" %}{% assign fromHH = from[0] %}{% assign fromMM = from[1] %}
+                    {% assign to = item.to | split: ":" %}{% assign toHH = to[0] %}{% assign toMM = to[1] %}
+                    
+                    {% if toHH == "00" %}
+                        {% assign toHH = 24 %}
+                        {% assign to[0] = 24 %}
+                    {% endif %}
+    
+                    {% assign hhDif = toHH | minus: fromHH  %}{% assign mmDif = toMM | minus: fromMM  %}
+                    
+                    
+                    {% if mmDif == -30 %}{% assign hhDif = hhDif | minus: 1 %}{% assign factor = mmDif | times: -1 | times: 100 | divided_by: 60 | prepend: "." | prepend: hhDif %}{% else %}{% assign factor = mmDif | times: 100 | divided_by: 60 | prepend: "." | prepend: hhDif %}{% endif %}
+                    {% if mmDif == -15 %}{% assign hhDif = hhDif | minus: 1 %}{% assign mmDif = mmDif | minus: 30 %}{% assign factor = mmDif | times: -1 | times: 100 | divided_by: 60 | prepend: "." | prepend: hhDif %}{% else %}
+                    
+                    {% assign factor = mmDif | times: 100 | divided_by: 60 | prepend: "." | prepend: hhDif %}{% endif %}                    
+
+                    {% assign factor = factor | plus: 0.0 %}{% assign width = factor | times: blockWidth  %}{% assign leftOffset = firstHourMM | divided_by: 60 %}
+                    {% assign hhDifLeft = fromHH | minus: firstHourHH  %}{% assign mmDifLeft = fromMM | minus: firstHourMM | divided_by: 60  %}
+                    {% assign left  =  mmDifLeft | plus: hhDifLeft | plus: leftOffset | times: blockWidth %}
+
+                    {% assign filters = "" | split: "," %}
+                    {% assign filters = filters | push: item.category  %}
+                    {% unless item.registration_required %}{% assign filters = filters | push: "no_registration"  %}{% endunless %}
+                    {% if item.cost == "0" %}{% assign filters = filters | push: "free"  %}{% endif %}
+
+
+                    <li style="width: {{ width  | append: 'rem' }}; left: {{ left | append: 'rem' }}" class="hotelActivity {% if hhDif < 2 and mmDif < 60 %}small{% endif %} {% for filter in filters %}filter_{{ filter }} {% endfor %}{% if item.description_markdown.size > 2 %}clickable{% endif %}" data-moved=0 data-width="{{ width }}" data-activity="{{ item.title  | slugify | append: '_' | append: entry.title | slugify | append: forloop.index }}" data-left="{{ left }}" data-from="{{ item.from }}" data-to="{{ item.to | replace: '00:', '24:' }}" data-visible="true" data-hotel="{{ entry.title | slugify }}" {% if item.description_markdown.size > 2 %}onclick="expandActivity(this)"{% endif %}>
+                    <span>{{ item.title }}</span>
+                    </li>
+                    {% endfor %}
+                <li class="relHeight"></li>
+                <li class="bg"></li>
+            </ul>
+        {% endfor %}
+        <ul id="background"> 
+
+
+            {% assign lastHour = 24 %}
+            {% for i in (firstHourHH..lastHour) %}
+            {% if firstHourMM > 0 %}{% assign firstHourHH = firstHourHH | minus: 1 %}{% endif %}
+                {% assign hh = i  %}
+                {% if hh < 10  %}{% assign hh = hh | prepend: "0" %}{% endif %}
+                <li class="time">
+                    <span>{{ hh | replace: "24", "00" }}:00</span>
+                    <span>{{ hh | replace: "24", "00" }}:00</span>
+                </li>        
+            {% endfor %}
+        </ul>
+    </div>
+
+
+    <ul id="popups">
+        {% for entry in data %}
+            {% for item in entry.activities %}
+                <li class="popup" id="{{ item.title  | slugify | append: '_' | append: entry.title | slugify | append: forloop.index }}">
+                    <h3>{{ item.title }}</h3>
+                    <h3>{{ entry.title }}</h3>
+
+                    <p class="legend"><img src="/img/time.svg" alt="Time icon">{{ item.from }} - {{ item.to }}</p>
+
+                    {% assign price = item.cost %}{% if price == "0" %}{% assign price = "Free" %}{% elsif price.size < 5 %}{% assign price = price | replace: "€", "" %}{% endif %}
+                    <p class="legend"><span>€</span>{{ price }}</p>
+                    {% if item.registration_required %}<p class="legend"><img src="/img/register.svg" alt="Registration icon">Registration is required</p>
+                    {% else} %}<p class="legend"><span>✓</span>No registration required</p>{% endif %}
+
+                    <h4>Description</h4>
+                    {{ item.description_markdown | markdownify }}
+
+                    {% if item.optional_registration_instructions.size > 2 or item.optional_no_registration_input_markdown.size > 2 %}
+                        <h4>Notes</h4>
+                        {% if item.optional_registration_instructions.size >2 %}<p>{{ item.optional_registration_instructions }}</p>{% endif %}
+                        {% if item.optional_no_registration_input_markdown %}<p>{{ item.optional_no_registration_input_markdown }}</p>{% endif %}
+                    {% endif %}
+
+                    {% if item.registration_required %}
+                        {% assign mailAddress = "" %}
+                        {% if entry.hotel_mailadres.size > 2  %}{% assign mailAddress = entry.hotel_mailadres %}{% endif %}
+                        {% if item.optional_registration_mail.size > 2 %}{% assign mailAddress = item.optional_registration_mail %}{% endif %}
+
+                        {% if item.optional_registration_url.size > 2 %}{% assign hotelLink = item.optional_registration_url %}{% else %}{% assign hotelLink = "" %}{% endif %}
+
+                        {% assign linkBool = false %}{% if hotelLink.size > 2 %}{% assign linkBool = true %}{% endif %}
+
+
+                        {% comment %}
+                            {% if linkBool == true %}
+                                <a target="_blank" href="{{ hotelLink }}">Register</a>
+                                {% else %}
+                                <a target="_blank" href="mailto:{{ mailAddress }}">E-mail this hotel</a>
+                                <span class="mail">{{ mailAddress }}</span>
+                            {% endif %}
+                        {% endcomment %}
+                        <a>Event is over</a>
+
+
+                    {% endif %}
+                    <span class="x" onclick="closeActivity();"></span>
+                </li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+    <div class="underlay" onclick="closeActivity();"></div>
+</div>

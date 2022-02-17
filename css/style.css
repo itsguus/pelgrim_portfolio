@@ -8,14 +8,25 @@ p a:hover {color: #f0a9f0;}
 br {margin: 0;}
 
 /* GENERAL */
-.hide-scrollbar::-webkit-scrollbar {display: none;}
-.hide-scrollbar {-ms-overflow-style: none;  /* IE and Edge */scrollbar-width: none;  /* Firefox */}
+.hide-scrollbar::-webkit-scrollbar, pre::-webkit-scrollbar, code::-webkit-scrollbar {display: none;}
+.hide-scrollbar, pre, code {-ms-overflow-style: none;  /* IE and Edge */scrollbar-width: none;  /* Firefox */}
 *::selection { background: #f0a9f0; color: #353535;}
 
 .arrow { color: #f0a9f0; font-family: "Staatliches"; font-size: 5.5vw;  display: block; cursor: pointer;}
 .arrow.down {transform: rotate(90deg);}
 
-section { position: relative; margin: 4rem auto; max-width: 55rem; }
+.link.arr.before::before { content: "<"; font-family: "Staatliches"; color: #f0a9f0; font-size: 1.2rem;  transform: translate(0, 2px); display: inline-block; margin-right: 0.5rem;}
+.link.arr.before.up::before{ transform: translate(0, 2px) rotate(90deg); }
+.link.arr.before.down::before{ transform: translate(0, 2px) rotate(-90deg); }
+.link.arr.after::after { content: ">"; font-family: "Staatliches"; color: #f0a9f0; font-size: 1.2rem;  transform: translate(0, 2px); display: inline-block; margin-left: 0.5rem;}
+.link.arr.after.up::after { transform: translate(0,2px) rotate(-90deg) }
+.link.arr.after.down::after { transform: translate(0,2px) rotate(90deg) }
+
+
+a.link { font-family: "Conv_Geomanist-Medium"; font-weight: 500; text-transform: lowercase; font-size: 1rem; transition: 250ms ease; padding: 0.2rem;}
+a.link:hover {color: #f0a9f0; }
+
+section { position: relative; margin: 2rem auto 4rem; max-width: 55rem; width: calc(100% - 2rem); }
 .line { position: relative; display: inline-block; }
 .line::before {content: ""; width: 0; transition: 500ms ease; height: 3px; position: absolute; background: #f0a9f0; left: 0; bottom: 0.25em; z-index: -1;}
 .line:hover::before {width: 100%;}
@@ -23,7 +34,8 @@ section { position: relative; margin: 4rem auto; max-width: 55rem; }
 
 /* HEADERS */
 h1,h2,h3,h4 {font-weight: bold; margin-bottom: 0.25rem; font-family: "Conv_Geomanist-Medium"; text-transform: lowercase;}
-h1 { font-size: 8vw; text-transform: uppercase; font-family: "Staatliches"; font-weight: normal;}
+.home h1 { font-size: 8vw; text-transform: uppercase; font-family: "Staatliches"; font-weight: normal;}
+h1 { font-size: 6vw; }
 h2 {font-size: 3.5vw;}
 h3 {font-size: 1.2rem;}
 h4 {font-size: 1.2rem;} 
@@ -38,12 +50,60 @@ section.introduction h2 {  animation: fadeIn 2s ease forwards; animation-delay: 
 section.introduction .arrow { position: relative; animation: hop 2s ease infinite alternate; margin-top: auto;;}
 
 
+.project section:first-of-type {margin-top: 0; padding-top: 2rem;}
+.project section:last-of-type {margin-bottom: 0; padding-bottom: 4rem;}
+.project section {max-width: 30rem;}
+.project section article { display: flex; flex-direction: column; align-items: flex-start; }
+.project section article p a { text-decoration: underline; }
+.project section article h3 {margin-top: 1rem;}
+.project section article strong { font-weight: 700;  margin-bottom: 0.5rem; display: inline-block;}
+.project section article em { font-weight: 700; display: inline-block; font-style: normal; margin-bottom: 0;}
+.project section article img {width: 100%;}
+.project section article > p:first-of-type { font-weight: 500; }
+.project section article blockquote { padding-left: 1.5rem; border-left: 3px solid #f0a9f0; margin: 1rem 0;}
+.project section article blockquote p {margin: 0; font-weight: 500;}
+.project section article > a.link { margin: 3rem 0 0 auto; }
+
+.project main > a.link { position: absolute;  top: 1rem; left: 1rem; }
+.project main > a.link::before { font-family: "Staatliches"; content: "<"; color: #f0a9f0; display: inline-block; margin-right: 0.5rem; transform: translateY(2px); font-weight: 500; transition: 250ms ease; }
+
+ul.links { align-self: flex-end; margin-bottom: 1rem; text-align: right;}
+ul.links li a { font-family: "Conv_Geomanist-Medium"; font-weight: 500; text-transform: lowercase; font-size: 1rem; transition: 250ms ease; padding: 0.2rem;}
+ul.links li a:hover {color: #f0a9f0; }
+ul.links li a::after { font-family: "Staatliches"; content: ">"; color: #f0a9f0; display: inline-block; margin-left: 0.5rem; transform: translateY(2px); font-weight: 500; transition: 250ms ease;}
+ul.links li a:hover::after { transform: translate(4px, 2px); }
+
+.highlighter-rouge { width: 100%; }
+pre { background: #fff; width: 100%;  padding: 0.5rem 0.5rem;  border-radius: 5px; font-size: 0.55rem; margin-bottom:  1rem;  overflow: hidden; cursor: pointer; position: relative; transition: 500ms ease; box-sizing: border-box;}
+pre::after { content:"Click to expand"; position: absolute; background: rgba(0,0,0,0.6); top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center;justify-content: center; text-transform: uppercase;  opacity: 0; transition: 250ms ease; font-size: 0.8rem; color: #FFF }
+pre:hover::after {opacity: 1;}
+section pre code.hljs { padding: 0; background: none; color: initial; overflow-x: visible;}
+
+pre.scrollable { overflow: scroll}
+pre:is(.expanded, .no_expand) { cursor: initial;}
+pre:is(.expanded, .no_expand)::after {opacity: 0; pointer-events: none;}
+
+code { background: #fff; width: 100%;  padding: 0.15rem;  border-radius: 5px; font-size: 0.55rem;  position: relative;}
+
+nav.toc { margin-bottom: 1rem; position: fixed; top: 6.7rem }
+nav.toc ul { transform: translateX(calc(-100% - 3rem));  }
+nav.toc ul li a { font-size: 0.8rem; opacity: 0.3; }
+nav.toc ul li a:hover { opacity: 1;}
+nav.toc ul li.active a {opacity: 1; }
+
+nav.toc.static { position: relative; top: 0;} 
+nav.toc.static ul { transform: none; }
+
+
 
 /* MEDIA QUERIES */
 @media only screen and (min-width: 1000px) {
-    h1 {font-size: 4rem;}
+    .home h1 {font-size: 4rem;}
+    h1 { font-size: 3rem;}
     h2 {font-size: 1.65rem;}
     .arrow { font-size: 2rem; }
+
+    .project main > a.link { position: fixed; }
 }
 
 /* ANIMATIONS */
@@ -57,3 +117,4 @@ section.introduction .arrow { position: relative; animation: hop 2s ease infinit
     0%{ opacity: 0;}
     100%{ opacity: 1;}
 }
+

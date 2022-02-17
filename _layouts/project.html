@@ -1,5 +1,23 @@
 {% include header.html %}
 
+<a href="/" class="link">Terug</a>
 
+<section>
+    <article>
+        <h1 id="top">{{ page.title }}</h1>
+        <ul class="links">
+            {% for item in page.links  %}
+                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+        <nav class="toc">
+            <ul>
+                <!-- Dynamically added -->
+            </ul>
+        </nav>
+        {{ content }}
+        <a class="link arr after up" href="#top">Back to top</a>
+    </article>
+</section>
 
 {% include footer.html %}

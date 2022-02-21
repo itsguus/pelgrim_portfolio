@@ -47,25 +47,31 @@ section.introduction :is(h1, h2)  {text-align: center; cursor: default;}
 section.introduction { animation: fadeIn 3s ease forwards;  }
 section.introduction h1 {margin-top: auto;}
 section.introduction h2 {  animation: fadeIn 2s ease forwards; animation-delay: 1s; opacity: 0; }
-section.introduction .arrow { position: relative; animation: hop 2s ease infinite alternate; margin-top: auto;;}
+section.introduction .arrow { position: relative; animation: hop 2s ease infinite alternate; margin-top: auto;}
 
 
-.project section:first-of-type {margin-top: 0; padding-top: 2rem;}
-.project section:last-of-type {margin-bottom: 0; padding-bottom: 4rem;}
-.project section {max-width: 30rem;}
-.project section article { display: flex; flex-direction: column; align-items: flex-start; }
-.project section article p a { text-decoration: underline; }
-.project section article h3 {margin-top: 1rem;}
-.project section article strong { font-weight: 700;  margin-bottom: 0.5rem; display: inline-block;}
-.project section article em { font-weight: 700; display: inline-block; font-style: normal; margin-bottom: 0;}
-.project section article img {width: 100%;}
-.project section article > p:first-of-type { font-weight: 500; }
-.project section article blockquote { padding-left: 1.5rem; border-left: 3px solid #f0a9f0; margin: 1rem 0;}
-.project section article blockquote p {margin: 0; font-weight: 500;}
-.project section article > a.link { margin: 3rem 0 0 auto; }
+section.project:first-of-type {margin-top: 0; padding-top: 2rem;}
+section.project:last-of-type {margin-bottom: 0; padding-bottom: 4rem;}
+section.project {max-width: 30rem;}
+section.project article { display: flex; flex-direction: column; align-items: flex-start; }
+section.project article p a { text-decoration: underline; }
+section.project article h3 {margin-top: 1rem;}
+section.project article strong { font-weight: 700;  margin-bottom: 0.5rem; display: inline-block;}
+section.project article em { font-weight: 700; display: block; font-style: normal; margin-bottom: 0;}
+section.project article img {width: 100%;}
+section.project article > p:first-of-type { font-weight: 500; }
+section.project article blockquote { padding-left: 1.5rem; border-left: 3px solid #f0a9f0; margin: 1rem 0;}
+section.project article blockquote p {margin: 0; font-weight: 500;}
+section.project article > a.link:nth-of-type(1) { margin-top: 2rem; }
+section.project article > a.link:last-child { margin: 0rem 0 3rem auto; }
+section.project article > ul:not(.links) { list-style-type: disc; padding-left: 1em; margin-bottom: 1.4em;}
+section.project article > ul:not(.links) li {margin-bottom: 0.5em;}
+section.project article > ol { list-style-type: numeric; padding-left: 1em; margin-bottom: 1.4em;}
+section.project article > ol li {margin-bottom: 0.5em;}
 
-.project main > a.link { position: absolute;  top: 1rem; left: 1rem; }
-.project main > a.link::before { font-family: "Staatliches"; content: "<"; color: #f0a9f0; display: inline-block; margin-right: 0.5rem; transform: translateY(2px); font-weight: 500; transition: 250ms ease; }
+.project main a.link.back { position: fixed;  top: 0rem; left: 1rem; }
+.project main a.link.back::before { font-family: "Staatliches"; content: "<"; color: #f0a9f0; display: inline-block; margin-right: 0.5rem; transform: translateY(2px); font-weight: 500; transition: 250ms ease; }
+.project main a.link.back.static {position: relative; top: auto; left: auto;  height: 0;}
 
 ul.links { align-self: flex-end; margin-bottom: 1rem; text-align: right;}
 ul.links li a { font-family: "Conv_Geomanist-Medium"; font-weight: 500; text-transform: lowercase; font-size: 1rem; transition: 250ms ease; padding: 0.2rem;}
@@ -73,20 +79,32 @@ ul.links li a:hover {color: #f0a9f0; }
 ul.links li a::after { font-family: "Staatliches"; content: ">"; color: #f0a9f0; display: inline-block; margin-left: 0.5rem; transform: translateY(2px); font-weight: 500; transition: 250ms ease;}
 ul.links li a:hover::after { transform: translate(4px, 2px); }
 
-.highlighter-rouge { width: 100%; }
+.highlighter-rouge { width: 100%; position: relative;}
+.highlighter-rouge::before { content:""; position: absolute; top: 0.25rem; right: 0.75rem; z-index: 1; font-weight: 500; font-size: 0.6rem; }
+div.language-yml::before { content:"YML"; color: #A26BC0}
+div.language-css::before { content:"CSS"; color: #2A90AD}
+div.language-js::before { content:"JS"; color: #C9CA02}
+div.language-json::before { content:"JSON"; color: #C9CA02}
+div.language-php::before { content:"PHP"; color: #4F5B93}
+div.language-html::before { content:"HTML"; color: #D7671A}
+div.language-jekyll::before { content:"Jekyll"; color: #3F1F1F}
+
+
 pre { background: #fff; width: 100%;  padding: 0.5rem 0.5rem;  border-radius: 5px; font-size: 0.55rem; margin-bottom:  1rem;  overflow: hidden; cursor: pointer; position: relative; transition: 500ms ease; box-sizing: border-box;}
-pre::after { content:"Click to expand"; position: absolute; background: rgba(0,0,0,0.6); top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center;justify-content: center; text-transform: uppercase;  opacity: 0; transition: 250ms ease; font-size: 0.8rem; color: #FFF }
+pre::after { content:"Click to expand"; position: absolute; background: rgba(0,0,0,0.6); top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center;justify-content: center; text-transform: uppercase;  opacity: 0; transition: 250ms ease; font-size: 0.8rem; color: #FFF; z-index: 2; ;}
 pre:hover::after {opacity: 1;}
+pre:not(.no_expand)::before { content: "expand -> "; position: absolute;  bottom: 0; right: 0; transform: rotate(90deg)  translate(0, 100%); transform-origin: bottom right; font-size: 0.45rem; background: #fff; z-index: 2;] transition: 250ms ease; color: #999; padding: 0.25rem; border-radius: 0.1rem; }  
 section pre code.hljs { padding: 0; background: none; color: initial; overflow-x: visible;}
 
 pre.scrollable { overflow: scroll}
 pre:is(.expanded, .no_expand) { cursor: initial;}
-pre:is(.expanded, .no_expand)::after {opacity: 0; pointer-events: none;}
+pre:is(.expanded, .no_expand)::after,
+pre:is(.expanded, .no_expand)::before {opacity: 0; pointer-events: none;}
 
-code { background: #fff; width: 100%;  padding: 0.15rem;  border-radius: 5px; font-size: 0.55rem;  position: relative;}
+code { background: #fff; width: 100%;  padding: 0.08rem 0.15rem;  border-radius: 5px; font-size: 0.55rem;  position: relative;}
 
-nav.toc { margin-bottom: 1rem; position: fixed; top: 6.7rem }
-nav.toc ul { transform: translateX(calc(-100% - 3rem));  }
+nav.toc { margin-bottom: 1rem; position: fixed; top: 6.7rem; pointer-events: none;}
+nav.toc ul { transform: translateX(calc(-100% - 3rem)); pointer-events: all; }
 nav.toc ul li a { font-size: 0.8rem; opacity: 0.3; }
 nav.toc ul li a:hover { opacity: 1;}
 nav.toc ul li.active a {opacity: 1; }

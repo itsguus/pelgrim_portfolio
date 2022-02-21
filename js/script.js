@@ -42,9 +42,16 @@ function generateListItem(h) {
 function tocListener() {
     const maxArticleWidth = 600;
     const toc = document.querySelector("nav.toc");
+    const a = document.querySelector("a.link.back")
     const tocWidth = toc.querySelector("ul").offsetWidth + 80;
-    if (window.innerWidth < (maxArticleWidth + (tocWidth * 2))) toc.classList.add("static");
-    else toc.classList.remove("static");
+    if (window.innerWidth < (maxArticleWidth + (tocWidth * 2))) {
+        toc.classList.add("static");
+        a.classList.add("static");
+    }
+    else {
+        toc.classList.remove("static");
+        a.classList.remove("static");
+    }
 }
 
 window.addEventListener("resize", tocListener);
@@ -94,4 +101,9 @@ document.querySelectorAll("pre").forEach(pre =>{
             pre.classList.add("scrollable")
         }, 500)
     })
+    pre.scrollTo(0,0)
 })
+
+document.querySelectorAll("section.project article p a").forEach(a => {
+    a.setAttribute("target", "_blank")
+});

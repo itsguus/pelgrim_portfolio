@@ -1,13 +1,13 @@
 {% include header.html %}
 
-<a href="/" class="link">Terug</a>
 
-<section>
+<section class="project">
     <article>
         <h1 id="top">{{ page.title }}</h1>
+        <a href="/" class="link back">Terug</a>
         <ul class="links">
             {% for item in page.links  %}
-                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                <li><a target="_blank" href="{{ item.url }}">{{ item.title }}</a></li>
             {% endfor %}
         </ul>
         <nav class="toc">
@@ -16,6 +16,7 @@
             </ul>
         </nav>
         {{ content }}
+        <a class="link arr before" href="/">Back to home</a>
         <a class="link arr after up" href="#top">Back to top</a>
     </article>
 </section>

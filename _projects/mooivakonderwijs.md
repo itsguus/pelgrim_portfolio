@@ -1,5 +1,6 @@
 ---
 title: Mooivakonderwijs
+order: 4
 links: 
     - title: Website
       url: https://www.mooivakonderwijs.nl/

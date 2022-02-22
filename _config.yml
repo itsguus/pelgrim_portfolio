@@ -20,3 +20,5 @@ defaults:
 collections:
   projects:
     output: true 
+  leerdoelen:
+    output: true

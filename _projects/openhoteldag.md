@@ -1,5 +1,6 @@
 ---
 title: Openhoteldag
+order: 1
 links: 
     - title: Website
       url: https://openhoteldag.com/

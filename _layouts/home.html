@@ -1,9 +1,80 @@
 {% include header.html %}
 
 <section class="introduction">
-    <h1>Omelette du fromage</h1>
-    <h2>Stageverslag van <span class="line">Guus Groenink</span></h2>
+    <h1 id="top">Omelette du fromage</h1>
+    <h2 id="top" class="no_index">Stageverslag van <span class="line">Guus Groenink</span></h2>
     <a class="arrow down">></a>
 </section>
+
+<section class="project voorwoord">
+    <article>
+        <h2 id="voorwoord">Voorwoord</h2>
+        {{ page.voorwoord | markdownify }}
+    </article>
+</section>
+
+<section class="meta project">
+    <nav class="toc">
+        <ul>
+            <!-- Dynamically added -->
+        </ul>
+    </nav>
+    <h2 id="metadata">Metadata</h2>
+    <p>
+        <strong>Opleiding</strong>
+        <span>Communicatie, Multimedia & Design, HvA</span>
+    </p>
+    <p><strong>Naam</strong>
+        <span>Guus Groenink</span>
+    </p>
+    <p><strong>Studentnummer</strong>
+        <span>500805855</span>
+    </p>
+    <p><strong>Begeleider HvA</strong>
+        <span>Koop Reynders</span>
+    </p>
+    <p><strong>Naam Bedrijf</strong>
+        <span>Omelette Du Fromage</span>
+    </p>
+    <p><strong>Functie binnen bedrijf</strong>
+        <span>Developer & Designer</span>
+    </p>
+    <p><strong>Begeleider bedrijf + functie</strong>
+        <span>Max van Hoof - Founder</span>
+    </p>
+    <p><strong>Datum oplevering</strong>
+        <span></span>
+    </p>
+</section>
+
+
+<section class="project">
+    {{ content  }}
+</section>
+
+{% assign siteprojects = site.projects | sort: "order"  %}
+{% for item in siteprojects %}
+    <section class="project">
+        <article>
+            <h2 id="{{ item.title | slugify }}"><a href="{{ item.url }}">project {{ item.title }}</a></h1>
+            <ul class="links">
+                {% for i in item.links  %}
+                    <li><a target="_blank" href="{{ i.url }}">{{ i.title }}</a></li>
+                {% endfor %}
+            </ul>
+            {{ item.content }}
+        </article>
+    </section>
+{% endfor %}
+
+
+{% for item in site.leerdoelen %}
+    <section class="project leerdoel">
+        <article>
+            <h2 id="{{ item.title | slugify }}"><a href="{{ item.url }}">{{ item.title }}</a></h1>
+            {{ item.content }}
+        </article>
+    </section>
+{% endfor %}
 
 {% include footer.html %}

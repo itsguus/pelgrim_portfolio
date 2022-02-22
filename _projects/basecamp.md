@@ -1,5 +1,6 @@
 ---
 title: Basecamp festival
+order: 3
 links:
   - title: Website
     url: https://basecampfestival.nl/

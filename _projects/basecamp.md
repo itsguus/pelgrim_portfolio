@@ -12,7 +12,7 @@ Een festival voor de re-generation. In samenwerking met [Nachtlab Agency](https:
 
 ![](/uploads/basecamp-1.png)
 
-### Concept
+### Concept &nbsp;
 
 Victor kwam echt met een klapper van een design aanzetten. Aanvankelijk stonden alleen de homepagina en de muziekpagina uitgewerkt om te developen, gaanderweg zijn er telkens designs bijgekomen. Victor had een unieke circulaire navigatie bedacht, iets wat je niet vaak ziet. Het was aan mij om te zorgen dat dit er goed uitzag en lekker werkte. 
 
@@ -192,7 +192,7 @@ soonPoints.forEach(point => {
 // --------------- END CURSOR STATES ---------------
 ```
 
-### resultaat
+### resultaat &nbsp;
 
 Ik was heel erg tevreden met het resultaat. Het was ook gaaf dat Victor hier een heel mooi concept had bedacht en mijn feedback zo mooi verwelkomd werd. Het voelde zo echt als een teamsport. Toen ik het de eerste keer via Zoom aan Victor presenteerde was hij er zeker over te spreken. Hij zei dat het nog beter was geworden dan hij had verwacht. Dat vond ik erg leuk om te horen. 
 

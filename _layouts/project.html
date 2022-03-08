@@ -4,7 +4,7 @@
 <section class="project">
     <article>
         <h1 id="top">{{ page.title }}</h1>
-        <a href="/" class="link back">Terug</a>
+        <a href="/#{{ page.title | slugify  }}" class="link back">Terug</a>
         <ul class="links">
             {% for item in page.links  %}
                 <li><a target="_blank" href="{{ item.url }}">{{ item.title }}</a></li>

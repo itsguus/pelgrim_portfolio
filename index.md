@@ -2,17 +2,20 @@
 title: Home
 layout: home
 voorwoord: |
-    Ik heb mijn stageverslag omgetoverd naar een website. Het idee was om het verslag wat persoonlijker en eigen te maken. 
+    Ik heb mijn stageverslag omgetoverd naar een website. Het idee was om op deze manier mijn verslag wat persoonlijker te maken. 
 
-    De instructies van het stageverslag vertelde dat je je stageverslag als CMD'er ook moet designen. Toen ik dit las dacht ik bij mezelf: "Dat mag je vast ook wel developen", dus toen heb ik dit zonder te vragen maar gewoon gedaan. 
+    De instructies van de stageverslag-template vertelde dat mij dat je als CMD'er je stageverslag ook moet designen. Toen ik dit aan het lezen was dacht ik bij mezelf: "Dat mag je vast ook wel developen", dus toen heb ik dit zonder te vragen maar gewoon gedaan. 
 
-    Ik ben tijdens mijn stage voornamelijk bezig geweest met coderen, dus ik vond een stagewebsite hier goed bij passen. Zo kon ik ook nog wat rondspelen met code en het schrijfproces wat leuker maken voor mezelf. 
+    Ik ben tijdens mijn stage voornamelijk bezig geweest met coderen en daarom vond ik een stagewebsite hier goed bij passen. Zo kon ik ook nog wat rondspelen met code en het schrijfproces wat leuker maken voor mezelf. 
 
 
     _Gebruiksaanwijzing_
-    Bij alle projecten is het mogelijk om op de titel van het project te klikken. In de project-pagina staat dezelfde content als de home, maar hier pakt de inhoudsopgave ook h3's mee. Zo kun je wat overzichtelijker door de projecten heen lezen. 
 
-    Wanneer content extreem lang werd, bijvoorbeeld webdesigns of lange stukken code, is deze uit te schuiven. Rechtsonderin staat een indicator dat dit mogelijk is. Je schuift het uit door er op te klikken. 
+    De table of contents wordt gegenereerd door alle h2's & h3's te indexeren. Afhankelijk van je scrollpositie worden de submenu's uitgeklapt. Je kunt ook hoveren om deze uit te klappen. Als je klikt op een onderwerp scroll je ernaartoe. Ik adviseer om het op desktop te bekijken, maar alles werkt ook op mobiel. 
+    
+    Bij alle projecten is het mogelijk om op de titel van het project te klikken. In de project-pagina staat dezelfde content als de home, maar hier neemt de inhoudsopgave ook standaard h3's mee. Zo kun je wat overzichtelijker door de projecten heen lezen. 
+
+    Wanneer content extreem lang werd, bijvoorbeeld webdesigns of lange stukken code, is deze uit te schuiven. In het geval dat een blok is uit te schuiven staat rechtsonderin een indicator "expand". Je schuift het uit door op het content blok te klikken. 
 --- 
 
 
@@ -24,7 +27,7 @@ Ik heb van de kans gekregen om bij dit topbedrijf van een halfjaar durende stage
 
 ### De herontmoeting
 
-Hartstochtig op zoek naar een stageplek stuitte ik bij restaurant Druis op een vriendelijke oud-collega, Max van Hoof. Jaren geleden stonden wij samen iedere vrijdag en zaterdag samen achter de bar en leerde hij mij daar de fijne kneepjes van het vak. We raakte in gesprek en ik begon over mijn opleiding en mijn zoektocht naar een stageplek. Een plaspauze en een elevator-pitch later hadden we een afspraak gemaakt om op kantoor het gesprek wat uitgebreider voort te zetten. 
+Hartstochtig op zoek naar een stageplek stuitte ik bij restaurant Druis op een vriendelijke oud-collega, Max van Hoof. Jaren geleden stonden wij samen iedere vrijdag en zaterdag samen achter de bar en leerde hij mij daar de fijne kneepjes van het vak. We raakte in gesprek en ik begon over mijn opleiding en mijn zoektocht naar een stageplek. Een plaspauze en een elevator-pitch later hadden we een afspraak gemaakt om op het kantoor van Max het gesprek wat uitgebreider voort te zetten. 
 
 In de jaren dat we elkaar niet meer hadden gesproken heb ik mij als CMD’er en ZZP’er ontwikkeld als webdeveloper, een rol die binnen het bedrijf van Max niet onbekend is. Nostalgisch over de tijden die we al werkend samen mee hebben gemaakt, heb ik bij Max een stageplek kunnen landen. 
 
@@ -39,9 +42,9 @@ Samen in de horeca staan schept toch een band. Het feit dat we al bekend waren m
     <img src="/uploads/guus_bril.jpg" >
 </figure>
 
-Ik ben 26 jaar oud en hik al langzaam (en toch te snel) richting de 27. In mijn wat jongere jaren vond ik een opleiding kiezen maar te moeilijk. Via trial & error ben ik uiteindelijk uitgekozen bij een opleiding die bij me past, Communicatie, Multimedia & Design.
+Ik ben 26 jaar oud en hik al langzaam (en toch te snel) richting de 27. In mijn wat jongere jaren vond ik een opleiding kiezen maar te moeilijk. Via trial & error ben ik uiteindelijk uitgekomen bij een opleiding die bij me past: Communicatie, Multimedia & Design.
 
-Ik zit ondertussen in mijn laatste jaar van CMD en de voorgaande jaren zijn vrij soepel verlopen. Tijdens COVID was mijn andere baan, barman, niet echt meer van toepassing. Door COVID heb ik twee jaar geleden de ruimte, tijd en kans gekregen om mezelf als ZZP'er binnen mijn vakgebied te gaan ontwikkelen. 
+Ik zit ondertussen in mijn laatste jaar van CMD en de voorgaande jaren zijn vrij soepel verlopen. Tijdens COVID was mijn bijbaan als barman niet echt meer van toepassing. Door COVID heb ik twee jaar geleden de ruimte, de tijd en de kans gekregen om mezelf als ZZP'er binnen mijn vakgebied te gaan ontwikkelen. 
 
 Ik kom uit Den Bosch en woon ondertussen al bijna acht jaar in Amsterdam. Ik heb inmiddels mijn eigen apartement op het Beukenplein, welke ik vol heb gezet met planten.
 
@@ -75,7 +78,7 @@ Gelukkig hoefde ik mijn onkunde in advertising & marketing niet te bewijzen en m
 
 Max heeft op de VU een universitaire Bachelor en Master in communicatiewetenschappen afgerond. Vanwege de groei van zijn bedrijf heeft hij zijn vaardigheden dusver uit moeten breiden om mini-expert te worden van alles wat er gebeurt in zijn bedrijf: Design, development, communicatie en UX. 
 
-Omdat hij in elk stadium van zijn bedrijf veel van deze takken zelf op heeft moeten pakken kan hij kritisch kijken naar webdesigns, presentaties, technische SEO, UX en website performance. Hij kan dit ook met alle afdelingen van marketing, maar daar heb ik een hoop minder mee te maken gehad.
+Omdat hij in elk stadium van zijn bedrijf veel van deze takken zelf op heeft moeten pakken kan hij kritisch kijken naar onder andere webdesigns, presentaties, technische SEO, UX en website performance. Hij kan dit ook met alle afdelingen van marketing, maar daar heb ik een hoop minder mee te maken gehad.
 
 Persoonlijk komt Max over als een hele prettige, respectvolle en grappige man. Hij vertelt dat een fijn team om zich heen en een prettige werksfeer voor hem meer betekent dan bakken met geld omzetten. 
 
@@ -85,8 +88,8 @@ Max is 32 jaar oud en woont met zijn vriendin, zoontje en hond in Amsterdam Oost
 
 ## Functies & werkzaamheden
 
-Waar ik van mezelf had verwacht dat ik voornamelijk aan de technische kant van mezelf zou werken, ben ik tijdens deze stage ook enorm geprikkeld om toch nog wat meer richting een designer te gaan leunen. Binnen de stage heb ik vaker mijn rol als developer ingenomen, maar ik heb ook veel vormgegeven. Zo werd er vaak even rondgevraagd of iemand visuals kon maken. Hier stak ik vaak mijn hand op en kon ik aan de slag.
+Waar ik van mezelf had verwacht dat ik voornamelijk aan de technische kant van mezelf zou werken, ben ik tijdens deze stage ook enorm geprikkeld om toch nog wat meer richting een designer te gaan leunen. Het meerendeel van mijn stage heb ik een rol als developer ingenomen, maar ik heb ook veel grafisch mogen vormgeven. Zo werd er vaak even rondgevraagd of iemand visuals kon maken. Hier stak ik vaak mijn hand op en kon ik aan de slag.
 
 Max heeft mij tegen het einde van de stage zelfs uitgedaagd om een heel webdesign te maken voor een aardig grote klant. 
 
-Er zijn vijf grote projecten die ik graag wil uitlichten. Ik heb hiernaast nog her en der wat klussen en kleine opdrachten gedaan, maar de projecten spreken het meest over mijn werkzaamheden. 
+Er zijn vijf grote projecten die ik graag wil uitlichten. Ik heb hiernaast nog her en der wat klussen en kleine opdrachten gedaan, maar de projecten spreken het meest over mijn werkzaamheden.

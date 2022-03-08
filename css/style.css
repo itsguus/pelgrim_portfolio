@@ -12,7 +12,7 @@ br {margin: 0;}
 .hide-scrollbar, pre, code {-ms-overflow-style: none;  /* IE and Edge */scrollbar-width: none;  /* Firefox */}
 *::selection { background: #f0a9f0; color: #353535;}
 
-.arrow { color: #f0a9f0; font-family: "Staatliches"; font-size: 5.5vw;  display: block; cursor: pointer;}
+.arrow { color: #f0a9f0; font-family: "Staatliches"; font-size: 5.5vw;  display: block; cursor: pointer; user-select: none;}
 .arrow.down {transform: rotate(90deg);}
 
 .link.arr.before::before { content: "<"; font-family: "Staatliches"; color: #f0a9f0; font-size: 1.2rem;  transform: translate(0, 2px); display: inline-block; margin-right: 0.5rem;}
@@ -55,9 +55,10 @@ section.project:last-of-type {margin-bottom: 0; padding-bottom: 4rem;}
 section.project {max-width: 30rem;}
 section.project article { display: flex; flex-direction: column; align-items: flex-start; }
 section.project article p a { text-decoration: underline; }
-section.project article h3 {margin-top: 1rem;}
+section.project article h3 {margin-top: 0.75rem;}
 section.project article strong { font-weight: 700;  margin-bottom: 0.5rem; display: inline-block;}
 section.project article em { font-weight: 700; display: block; font-style: normal; margin-bottom: 0;}
+section.project article em:only-child {margin-bottom: -0.75rem;}
 section.project article img {width: 100%;}
 section.project article > p:first-of-type { font-weight: 500; }
 section.project article blockquote { padding-left: 1.5rem; border-left: 3px solid #f0a9f0; margin: 1rem 0;}
@@ -72,6 +73,7 @@ section.project article > ol li {margin-bottom: 0.5em;}
 .project main a.link.back { position: fixed;  top: 0rem; left: 1rem; }
 .project main a.link.back::before { font-family: "Staatliches"; content: "<"; color: #f0a9f0; display: inline-block; margin-right: 0.5rem; transform: translateY(2px); font-weight: 500; transition: 250ms ease; }
 .project main a.link.back.static {position: relative; top: auto; left: auto;  height: 0;}
+
 
 ul.links { align-self: flex-end; margin-bottom: 1rem; text-align: right;}
 ul.links li a { font-family: "Conv_Geomanist-Medium"; font-weight: 500; text-transform: lowercase; font-size: 1rem; transition: 250ms ease; padding: 0.2rem;}
@@ -104,14 +106,14 @@ pre:is(.expanded, .no_expand)::before {opacity: 0; pointer-events: none;}
 code { background: #fff; width: 100%;  padding: 0.08rem 0.15rem;  border-radius: 5px; font-size: 0.55rem;  position: relative;}
 
 
-figure.expand { overflow: hidden; cursor: pointer; position: relative; transition: 500ms ease;  margin-bottom: 1rem;}
+figure.expand { overflow: hidden; cursor: pointer; position: relative; transition: 500ms ease;  margin-bottom: 1rem; border-radius: 5px;}
 figure.expand ~ p em:only-child {margin-bottom: -0.5rem;}
 figure.expand::before { content: "expand -> "; position: absolute;  bottom: 0; right: 0; transform: rotate(90deg)  translate(0, 100%); transform-origin: bottom right; font-size: 0.45rem; z-index: 2; transition: 250ms ease; color: #999; padding: 0.25rem; border-radius: 0.1rem; }  
 figure.expand::after { content:"Click to expand"; position: absolute; background: rgba(0,0,0,0.8); top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center;justify-content: center; text-transform: uppercase;  opacity: 0; transition: 250ms ease; font-size: 0.8rem; color: #FFF; z-index: 2; ; font-weight: 500;}
 figure.expand:hover::after {opacity: 1;}
 figure.expanded { cursor: initial;}
 figure.expanded::before,
-figure.expanded::after { opacity: 0 !important; pointer-events: none !important;; }
+figure.expanded::after { opacity: 0 !important; pointer-events: none !important; }
 
 figure.person {position: relative; height: 0; width: 100%; padding-bottom: 100%; margin-bottom: 1rem;}
 figure.person img { width: 100%; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;}
@@ -119,14 +121,22 @@ figure.person img:last-of-type { opacity: 0;}
 figure.person:hover img:last-of-type { opacity: 1;}
 
 nav.toc { margin-bottom: 1rem; position: fixed; top: 6.7rem; pointer-events: none;}
-nav.toc ul { transform: translateX(calc(-100% - 3rem)); pointer-events: all; }
-nav.toc ul li a { font-size: 0.8rem; opacity: 0.3; }
-nav.toc ul li a:hover { opacity: 1;}
-nav.toc ul li.active a {opacity: 1; }
+nav.toc h4 { display: none; }
+nav.toc > ul { transform: translateX(calc(-100% - 3rem)); pointer-events: all; }
+nav.toc > ul > li a { font-size: 0.8rem; opacity: 0.3; }
+nav.toc > ul > li a:hover { opacity: 1;}
+nav.toc > ul  li.active > a {opacity: 1; }
+nav.toc > ul > li > ul { max-height: 0; overflow: hidden; padding-left: 1em; transition: 500ms ease-in-out; }
+nav.toc > ul > li > ul li a {font-size: 0.7rem; }
+nav.toc > ul > li.show > ul { max-height: 10rem; }
+nav.toc > ul > li:hover > ul { max-height: 10rem; transition-delay: 250ms;}
 
 
 nav.toc.static { position: relative; top: 0;} 
-nav.toc.static ul { transform: none; }
+nav.toc.static h4 {display: block; margin-top: 1rem;}
+nav.toc.static > ul { transform: none; }
+nav.toc.static :is(ul, li, a) {opacity: 1;  }
+nav.toc.static ul ul { max-height: 0 !important;}
 
 section.meta { display: flex; flex-direction: column; align-items: flex-start }
 section.meta > p { display: flex; justify-content: space-between;  width: 100%;  align-items: center;}
@@ -136,7 +146,7 @@ section.meta > p strong {padding-right: 0.5rem;}
 section.meta > p span  {padding-left: 0.5rem; font-weight: 300;}
 
 .home section.project h3 { font-size: 0.8rem; }
-.home section.project h2 {margin-top: 3rem;}
+.home section.project h2 {margin-top: 2.5rem;}
 
 .home nav.toc {opacity: 0; pointer-events: none; transition: 250ms ease; top: 3rem; }
 .home nav.toc.static { top:0;  }
@@ -144,6 +154,10 @@ section.meta > p span  {padding-left: 0.5rem; font-weight: 300;}
 .home section.project h2 a:hover { color: #f0a9f0; }
 .home section.leerdoel strong {margin-bottom: 0;}
 .home section.leerdoel article > p:first-of-type {font-weight: 300;}
+.home section.leerdoel ol li::marker { font-weight: 700; }
+.home section.leerdoel ol > li { margin-bottom: 0.75rem; }
+.home section.leerdoel ol ul { list-style: disc; padding-left: 1.5em;  margin-top: 0.25rem;}
+.home section.leerdoel ol ul li { margin-bottom: 0.25rem;  font-weight: 300;}
 
 /* MEDIA QUERIES */
 @media only screen and (min-width: 1000px) {
@@ -154,6 +168,11 @@ section.meta > p span  {padding-left: 0.5rem; font-weight: 300;}
 
     .project main > a.link { position: fixed; }
 }
+
+@media only screen and (max-width: 500px) {
+    h2 { font-size: 1.3rem;}
+}
+
 
 /* ANIMATIONS */
 @keyframes hop {

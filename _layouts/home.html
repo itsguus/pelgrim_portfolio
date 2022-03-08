@@ -3,7 +3,7 @@
 <section class="introduction">
     <h1 id="top">Omelette du fromage</h1>
     <h2 id="top" class="no_index">Stageverslag van <span class="line">Guus Groenink</span></h2>
-    <a class="arrow down">></a>
+    <a class="arrow down" href="#voorwoord">></a>
 </section>
 
 <section class="project voorwoord">
@@ -15,6 +15,7 @@
 
 <section class="meta project">
     <nav class="toc">
+        <h4>Inhoudsopgave</h4>
         <ul>
             <!-- Dynamically added -->
         </ul>
@@ -62,19 +63,32 @@
                     <li><a target="_blank" href="{{ i.url }}">{{ i.title }}</a></li>
                 {% endfor %}
             </ul>
-            {{ item.content }}
+            {% assign anchor = item.title | slugify | prepend: "#" %}
+            {{ item.content | replace: "#top", anchor }}
         </article>
     </section>
 {% endfor %}
 
 
-{% for item in site.leerdoelen %}
+{% assign extras = site.leerdoelen | concat: site.observatieopdrachten %}
+{% for item in extras %}
     <section class="project leerdoel">
         <article>
-            <h2 id="{{ item.title | slugify }}"><a href="{{ item.url }}">{{ item.title }}</a></h1>
+            <h2 id="{{ item.title | slugify }}">{{ item.title }}</h1>
             {{ item.content }}
         </article>
     </section>
 {% endfor %}
+
+
+<!-- 
+    
+Bij reflectie iets over de merger met TADA
+Iets over kantoor verbouwen - dat dat teambuilding gaf 
+
+Wat ging niet goed - vergeten dat ik stage loop 
+
+
+-->
 
 {% include footer.html %}

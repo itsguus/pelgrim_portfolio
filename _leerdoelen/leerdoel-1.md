@@ -4,7 +4,7 @@ title: Leerdoel 1
 
 **Multidisciplinair samenwerken:** Als mijn collega's mij aan het eind van de stage zowel zakelijk als persoonlijk een fijne, betrouwbare collega zouden noemen zou ik zeggen dat deze competentie heb behaald. Het doel is hier om te leren hoe ik mezelf opstel om binnen een bedrijf als prettige collega ervaren te worden.
 
-### Uitdaging
+### Uitdaging &nbsp;
 
 Als mijn collega's mij aan het eind van de stage zowel zakelijk als persoonlijk een fijne, betrouwbare collega zouden noemen zou ik zeggen dat deze competentie heb behaald. 
 

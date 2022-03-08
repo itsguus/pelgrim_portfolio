@@ -1,12 +1,6 @@
 function page(name) { if (document.body.classList.contains(name)) return true; return false; }
 hljs.highlightAll();
 
-if (page("home")) {
-    document.querySelector("section.introduction a.arrow").addEventListener("click", () => {
-        window.scrollBy(0, 500)
-    });
-}
-
 
 function populateToc() {
     const nav = document.querySelector("nav.toc"),
@@ -22,8 +16,27 @@ function populateToc() {
             ul.append(listItem);
         }
     });
-
     tocListener();
+    if (page("home"))
+        populateSubMenus();
+}
+
+function populateSubMenus() {
+    const h3s = document.querySelectorAll("h3"),
+        tocLis = document.querySelectorAll("nav.toc ul li");
+    tocLis.forEach(li => {
+        const ul = document.createElement("ul");
+        li.appendChild(ul);
+    })
+
+    h3s.forEach(h3 => {
+        let temp = h3;
+        do {
+            temp = temp.previousElementSibling;
+        } while (temp.tagName != "H2")
+        const li = document.querySelector(`nav.toc ul li[data-for=${temp.id}]`);
+        li.querySelector("ul").appendChild(generateListItem(h3));
+    });
 }
 
 function generateListItem(h) {
@@ -33,6 +46,7 @@ function generateListItem(h) {
 
     li.setAttribute('data-for', id);
 
+    if (h.tagName == "H1" || h.tagName == "H2") li.classList.add("parent")
     a.href = `#${id}`;
     a.textContent = h.textContent;
     a.classList.add("link")
@@ -48,7 +62,6 @@ function tocListener() {
     const toc = document.querySelector("nav.toc");
     const a = document.querySelector("a.link.back")
     const tocWidth = toc.querySelector("ul").offsetWidth + 80;
-    console.log(tocWidth);
     if (window.innerWidth < (maxArticleWidth + (tocWidth * 2))) {
         toc.classList.add("static");
         if (page("project"))
@@ -67,10 +80,9 @@ populateToc();
 
 
 let hs = document.querySelectorAll("h1, h2, h3");
-if (page("home")) hs = document.querySelectorAll("h1,h2")
 hs.forEach(h => {
     setTimeout(() => {
-        if (h.getBoundingClientRect().y <= 80) {
+        if (h.getBoundingClientRect().y <= 80 && h.getBoundingClientRect().y > -window.innerHeight) {
             setActive(h);
         }
     }, 150);
@@ -78,7 +90,9 @@ hs.forEach(h => {
 
 window.addEventListener('scroll', () => {
     hs.forEach(h => {
-        if (h.getBoundingClientRect().y <= 80) setActive(h);
+        if (h.getBoundingClientRect().y <= 80 && h.getBoundingClientRect().y > -window.innerHeight) {
+            setActive(h);
+        }
     })
     if ((window.scrollY + window.innerHeight) > (document.body.scrollHeight - 10)) setActive(hs[hs.length - 1]);
 
@@ -97,8 +111,15 @@ function setActive(el) {
     const lis = document.querySelectorAll("nav.toc li");
     lis.forEach(li => {
         li.classList.remove("active");
+        li.classList.remove("show");
     })
-    document.querySelector(`li[data-for=${el.id}]`).classList.add("active")
+    document.querySelector(`li[data-for=${el.id}]`).classList.add("active");
+
+    if (page("home")) {
+
+        document.querySelector(`li[data-for=${el.id}]`).closest("li.parent").classList.add("show");
+        document.querySelector(`li[data-for=${el.id}]`).closest("li.parent").classList.add("active");
+    }
 }
 
 document.querySelectorAll("pre, .pre").forEach(pre => {

@@ -17,7 +17,7 @@ Zou je het fantastisch vinden een vak te leren waarmee je iets met je handen maa
 >
 
 
-### uitdagingen
+### uitdagingen &nbsp;
 
 Bij deze website stond functionaliteit hoog op de prioriteitenlijst. Het design was gemaakt met gebruiksgemak op nummer 1. Een belangrijk onderdeel van deze website was een API-koppeling met [Coachview](https://www.coachview.net/), software om opleidingen te beheren. Het was aan mij om deze website en deze koppeling te bouwen.
 
@@ -44,9 +44,11 @@ Developer Joost vertelde mij aan het begin van mijn stage al dat het beginnen in
 {{ end }}{%endraw%}
 ```
 
-Ik vind hier Jekyll ontzettend logisch, ik geloof zelfs dat iemand die een basiskennis van code heeft hier uit kan komen. Hugo daarentegen is echt een soep met tekens. De constructors van de conditional statements komen voor de paramaters, wat zorgt voor een vreemde syntax. 
+Ik vind hier Jekyll ontzettend logisch, ik ben van mening dat iemand met een basiskennis van code hier uit kan komen. Hugo daarentegen is echt een soep met tekens. De constructors van de conditional statements komen voor de paramaters, wat zorgt voor een vreemde syntax. 
 
-Maar, als je het eenmaal onder de knie hebt vind ik het wel echt de moeite waard. De build speed is zo veel sneller dan Jekyll, en het image processen is ook erg waardevol voor je page-speed. 
+Maar, als je het eenmaal onder de knie hebt vind ik het wel echt de moeite waard. De build speed is zo veel sneller dan Jekyll, en het image processen geeft twee hele belangrijke voordelen: 
+* Je hebt veel meer controle over je pagespeed.
+* Als je een klant hebt die niks van websites of images of bytes snapt, hoef je die ook niet meer uit te leggen dat een foto van 3MB op een website niet werkt. 
 
 ### Coachview
 
@@ -237,6 +239,7 @@ Met een cronjob heb ik er voor gezorgd dat de pagina elke 24 uur opnieuw bouwt. 
 
 
 _Punt 2_
+
 Nu moest ik ook nog een endpoint hebben die de formdata van een aanvraag zou verwerken. De formdata werd via een webhook naar mijn endpoint gestuurd, en vervolgens werd deze toegevoegd aan Coachview.
 
 ```php
@@ -569,6 +572,7 @@ header('HTTP/1.1 200 OK');
 ```
 
 _Punt 3_
+
 Nu moest ik op dezelfde droplet ook nog een PHP bestand schrijven die de beschikbare plaatsen van een opleiding ophaalt uit Coachview. Deze lijkt heel veel op het PHP script uit Punt 1, maar dan flink gereduceerd. 
 
 ```php
@@ -661,7 +665,7 @@ function populatePlaatsen() {
 
 ```
 
-### Resultaat
+### Resultaat &nbsp; &nbsp;
 
 Ik had dit project een beetje onderschat. Toen ik de layouts zag verwachtte ik het in een paar dagen gemaakt te kunnen hebben. Dit klopt ergens ook wel, want de front-end stelde, los van het [filteren en zoeken van producten](https://www.mooivakonderwijs.nl/vakscholing/), niet super veel voor. 
 

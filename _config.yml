@@ -22,3 +22,5 @@ collections:
     output: true 
   leerdoelen:
     output: true
+  observatieopdrachten:
+    output: true

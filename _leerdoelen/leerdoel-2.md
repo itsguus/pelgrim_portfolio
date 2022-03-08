@@ -6,13 +6,13 @@ title: Leerdoel 2
 
 Het "op commando" gedeelte gaat over een daadwerkelijke presentatie geven. Je hebt iets gemaakt, je bereidt dit voor en laat het zien aan de stakeholders.
 
-### Uitdaging
+### Uitdaging &nbsp; &nbsp;
 
 Ik geloof dat de tweesplitsing voor mij zo voelt omdat ik in het dagelijkse leven mezelf aardig weet te manifesteren en presenteren. Ik heb een goed gevoel over wie ik ben, hoe ik anderen wil behandelen en hoe ik zelf behandeld wil worden. In andere woorden: het organische gaat mij best goed af. 
 
 Het presenteren is voor mij wel een groter leerdoel. Dit is me gedurende mijn CMD-carriere best goed afgegaan, maar hier heb ik vrijwel altijd zitten presenteren aan klasgenoten of docenten. Hier zat even veel tijd in, maar het is toch een andere lading om dit als vertegenwoordiger van een bedrijf te doen.
 
-### Uitwerking & ontwikkeling
+### Uitwerking & ontwikkeling &nbsp;
 
 Dit leerdoel is op het ene vlak precies gegaan zoals ik had verwacht, terwijl het op een ander vlak juist enorm contrasteerde. 
 

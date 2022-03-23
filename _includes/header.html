@@ -9,9 +9,9 @@
 {% assign pagecontent_description = page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 %}
 <meta name="description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}">
 
-<link rel="shortcut icon" type="image/png" href="/img/icon-196x196.png">
-<link rel="shortcut icon" sizes="196x196" href="/img/icon-196x196.png">
-<link rel="apple-touch-icon" href="/img/icon-196x196.png">
+<link rel="shortcut icon" type="image/png" href="{% unless page.layout == "home" %}../{% endunless %}img/icon-196x196.png">
+<link rel="shortcut icon" sizes="196x196" href="{% unless page.layout == "home" %}../{% endunless %}img/icon-196x196.png">
+<link rel="apple-touch-icon" href="{% unless page.layout == "home" %}../{% endunless %}img/icon-196x196.png">
 
  <!-- Facebook integration -->
 <meta property="og:title" content="{{ page.title }}"/>
@@ -35,12 +35,18 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-<link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
-<link rel="stylesheet" href="{{ "/css/fonts.css" | prepend: site.baseurl }}">
+
+{% if page.layout == "home" %}
+      <link rel="stylesheet" href="{{ "css/style.css" | prepend: site.baseurl }}">
+      <link rel="stylesheet" href="{{ "css/fonts.css" | prepend: site.baseurl }}">
+{% else %}
+      <link rel="stylesheet" href="{{ "../css/style.css" | prepend: site.baseurl }}">
+      <link rel="stylesheet" href="{{ "../css/fonts.css" | prepend: site.baseurl }}">
+{% endif %}
+
 <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
 </head>
 <body class="{{ page.layout }}" id="top">
-{% assign u = "/pelgrim_portfolio/" %}
+
 {% include navigation.html %}

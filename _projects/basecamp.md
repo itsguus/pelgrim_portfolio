@@ -5,12 +5,12 @@ links:
   - title: Website
     url: https://basecampfestival.nl/
   - title: Aangeleverd design
-    url: /uploads/basecamp-1.pdf
+    url: uploads/basecamp-1.pdf
 ---
 
 Een festival voor de re-generation. In samenwerking met [Nachtlab Agency](https://www.nachtlabagency.com/) hebben we deze unieke custom website opgezet. Ik was in direct contact met designer Victor. Nachtlab is ook onderdeel van D/DOCK en zij werken vaak in DB55. 
 
-![](/uploads/basecamp-1.png)
+![](uploads/basecamp-1.png)
 
 ### Concept &nbsp;
 
@@ -60,7 +60,7 @@ Helaas wilde Chrome niet met me meedoen. Schijnbaar kun je een `textPath` alleen
 
 Dit werkte statisch al goed, de links deden het en de cirkel zag eruit zoals op het design. Ik wilde alleen ook nog een hover-effect maken. Ik had het idee om op `:hover` de menu item een gedraaide achtergrond te geven met een `::before`. De kleur van deze achtergrond is met elke hover random één van de 5 huisstijl-kleuren,   Zoals hieronder afgebeeld: 
 
-![](/uploads//basecamp-2.png)
+![](uploads/basecamp-2.png)
 
 Dit trucje ging helaas niet werken. Ik had geen toeggang tot pseudo-elementen omdat ik een een SVG zat te werken. Ik heb dit uiteindelijk opgelost door dezelfde `partial` nog een keer op de pagina te zetten, die niet zichtbaar is. Als er gehoverd wordt krijgt de achterliggende cirkel een random kleurtje, een kleine scale en een kleine rotation. Hierdoor heb ik het gewenste effect alsnog voor elkaar gekregen. 
 

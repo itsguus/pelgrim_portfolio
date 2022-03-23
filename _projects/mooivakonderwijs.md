@@ -10,7 +10,7 @@ links:
 
 Een onderwijsorganisatie die opleidingen in vakmanschap aanbiedt. Omelette Du Fromage werd benaderd door [Studio ANTIGIF](https://www.antigif.nl/) om een door hen ontworpen website te kunnen bouwen. 
 
-![](/uploads/mvo-1.png)
+![](uploads/mvo-1.png)
 
 >
 Zou je het fantastisch vinden een vak te leren waarmee je iets met je handen maakt? Onze leermeesters brengen je graag de fijne kneepjes van het vak bij. Voor alle leeftijden! Voor particulieren & bedrijven.
@@ -620,7 +620,7 @@ echo $myResponse;
 
 Als je bij deze endpoint in de URL een id meegeeft, wordt via Coachview het max aantal plaatsen samen met het bezette aantal plaatsen gereturned. 
 
-![](/uploads/mvo-2.png)
+![](uploads/mvo-2.png)
 
 Zodra een bezoeker op een opleidingspagina komt, wordt er met JS een fetch gedaan naar deze endpoint. De data die terugkomt wordt ingevuld op de juiste plek. De data van deze pagina wordt dan ook in de sessionStorage gezet, zodat de fetch niet bij iedere refresh gedaan hoeft te worden, en wel nog up to date blijft. 
 

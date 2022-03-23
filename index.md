@@ -38,8 +38,8 @@ Samen in de horeca staan schept toch een band. Het feit dat we al bekend waren m
 ## About Guus
 
 <figure class="person">
-    <img src="/uploads/guus.jpg" >
-    <img src="/uploads/guus_bril.jpg" >
+    <img src="uploads/guus.jpg" >
+    <img src="uploads/guus_bril.jpg" >
 </figure>
 
 Ik ben 26 jaar oud en hik al langzaam (en toch te snel) richting de 27. In mijn wat jongere jaren vond ik een opleiding kiezen maar te moeilijk. Via trial & error ben ik uiteindelijk uitgekomen bij een opleiding die bij me past: Communicatie, Multimedia & Design.
@@ -72,8 +72,8 @@ Gelukkig hoefde ik mijn onkunde in advertising & marketing niet te bewijzen en m
 ## About Max
 
 <figure class="person">
-    <img src="/uploads/max.jpg" >
-    <img src="/uploads/max_bril.jpg" >
+    <img src="uploads/max.jpg" >
+    <img src="uploads/max_bril.jpg" >
 </figure>
 
 Max heeft op de VU een universitaire Bachelor en Master in communicatiewetenschappen afgerond. Vanwege de groei van zijn bedrijf heeft hij zijn vaardigheden dusver uit moeten breiden om mini-expert te worden van alles wat er gebeurt in zijn bedrijf: Design, development, communicatie en UX. 

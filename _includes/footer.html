@@ -2,6 +2,13 @@
 <footer>
 
 </footer>
-<script type="text/javascript" src="{{ '/js/script.js' | prepend: site.baseurl }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+{% if page.layout == "home" %}
+    <script type="text/javascript" src="{{ 'js/script.js' | prepend: site.baseurl }}"></script>
+{% else %}
+    <script type="text/javascript" src="{{ '../js/script.js' | prepend: site.baseurl }}"></script>
+{% endif  %}
 </body>
 </html> 

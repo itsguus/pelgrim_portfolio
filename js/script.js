@@ -1,5 +1,5 @@
 function page(name) { if (document.body.classList.contains(name)) return true; return false; }
-hljs.highlightAll();
+
 
 
 function populateToc() {
@@ -142,21 +142,20 @@ document.querySelectorAll("pre, .pre").forEach(pre => {
     pre.scrollTo(0, 0)
 })
 
-document.querySelectorAll("figure.expand").forEach(figure => {
-    figure.querySelector("img").addEventListener("load", () => {
+window.onload = () => {
+    document.querySelectorAll("figure.expand").forEach(figure => {
         figure.setAttribute("data-height", figure.offsetHeight);
         figure.style = `height: 10rem; `
         figure.classList.add("expandable")
-
-    });
-    figure.addEventListener("click", () => {
-        figure.style = `height: ${figure.getAttribute("data-height")}px`;
-        figure.classList.add("expanded");
-        setTimeout(() => {
-            figure.style = "height: 100%";
-        }, 500);
-    });
-})
+        figure.addEventListener("click", () => {
+            figure.style = `height: ${figure.getAttribute("data-height")}px`;
+            figure.classList.add("expanded");
+            setTimeout(() => {
+                figure.style = "height: 100%";
+            }, 500);
+        });
+    })
+}
 
 document.querySelectorAll("section.project article p a").forEach(a => {
     a.setAttribute("target", "_blank")

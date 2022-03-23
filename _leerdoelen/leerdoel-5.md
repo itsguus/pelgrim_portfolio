@@ -18,6 +18,6 @@ Ik ben blij dat ik hier enigszins aanleg voor heb gehad en dat ik bij CMD de rui
 
 ### Uitwerkingen
 
-Het project van [DB55](/db55) vind ik een goed voorbeeld. Er was een mobiel ontwerp gemaakt, maar deze was heel simpel. Ik liep uiteindelijk toch nog tegen [een responsive probleem aan, die ik naar mijn mening elegant heb opgelost](/db55#toch-nog-scrollen). Je kunt het zien op de [DB55 Website](https://www.db55.nl/restaurant)
+Het project van [DB55](db55) vind ik een goed voorbeeld. Er was een mobiel ontwerp gemaakt, maar deze was heel simpel. Ik liep uiteindelijk toch nog tegen [een responsive probleem aan, die ik naar mijn mening elegant heb opgelost](db55#toch-nog-scrollen). Je kunt het zien op de [DB55 Website](https://www.db55.nl/restaurant)
 
-Het [Basecamp Festival](/basecamp) project is ook op een iets uniekere manier responsive gemaakt, waar op pagina's anders dan de homepage het menu uitklapt en deze de content naar binnen duwt. Zodra de width van de main-content zijn min-width bereikt wordt deze off-screen geduwd. Zodra het de mobile max-width bereikt wordt blijft de content staan en wordt het menu hier overheen geduwd. [Probeer het zelf! Gooi het menu open en lekker schuiven met de browser!]((https://basecampfestival.nl/about))
+Het [Basecamp Festival](basecamp) project is ook op een iets uniekere manier responsive gemaakt, waar op pagina's anders dan de homepage het menu uitklapt en deze de content naar binnen duwt. Zodra de width van de main-content zijn min-width bereikt wordt deze off-screen geduwd. Zodra het de mobile max-width bereikt wordt blijft de content staan en wordt het menu hier overheen geduwd. [Probeer het zelf! Gooi het menu open en lekker schuiven met de browser!]((https://basecampfestival.nl/about))

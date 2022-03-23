@@ -3,28 +3,28 @@ title: De Droomzomer
 order: 5
 links:  
     - title: Aangeleverde brandbook
-      url: /uploads/droomzomer-1.pdf
+      url: uploads/droomzomer-1.pdf
     - title: beknopte briefing
-      url: /uploads/droomzomer-2.pdf
+      url: uploads/droomzomer-2.pdf
     - title: snelle moodboard
-      url: /uploads/droomzomer-3.pdf
+      url: uploads/droomzomer-3.pdf
     - title: Stijloptie 1
-      url: /uploads/droomzomer-4.pdf
+      url: uploads/droomzomer-4.pdf
     - title: Stijloptie 2
-      url: /uploads/droomzomer-5.pdf
+      url: uploads/droomzomer-5.pdf
     - title: webdesign droomzomer (def)
-      url: /uploads/droomzomer-6.pdf
+      url: uploads/droomzomer-6.pdf
 ---
 
 Tegen het einde van mijn stageperiode ging ik samen met Max naar een meeting met 4PM Entertainment, een evenementenorganisatie. Zij zijn bezig met een familie-vriendelijke festival, De Droomzomer, en wilde met ons een nieuwe website maken. 
 
-![](/uploads/droomzomer-1.png)
+![](uploads/droomzomer-1.png)
 
 ### Uitdaging
 
 Na de meeting zat ik samen met Max in de auto terug naar kantoor. Hier stelde Max voor of ik bij dit project naast de development ook het design wilde maken. Ik heb vaker webdesigns gemaakt maar nog niet voor een klant van dit kaliber. Ik vond het spannend om dit te doen, maar wetende dat ik mensen om me heen had om mee te overleggen ging ik ermee aan de slag. 
 
-Met de [aangeleverde brandbook](/uploads/droomzomer-1.pdf) en een [beknopte briefing](/uploads/droomzomer-2.pdf) ging ik aan de slag. Ik begon met het maken van een [snelle moodboard](/uploads/droomzomer-3.pdf), waarin ik wat voorbeelden van websites had verzameld die voldeden aan het gevoel die ik bij de briefing overhield. Na dit korte onderzoek ben ik begonnen met het design.
+Met de [aangeleverde brandbook](uploads/droomzomer-1.pdf) en een [beknopte briefing](uploads/droomzomer-2.pdf) ging ik aan de slag. Ik begon met het maken van een [snelle moodboard](uploads/droomzomer-3.pdf), waarin ik wat voorbeelden van websites had verzameld die voldeden aan het gevoel die ik bij de briefing overhield. Na dit korte onderzoek ben ik begonnen met het design.
 
 
 ### Opdracht 
@@ -33,7 +33,7 @@ Max gaf mij als opdracht om even twee versies van de homepagina te ontwerpen, me
 
 Ik vond het erg leuk om dit project aan te werken. Dit kwam mede omdat ik veel assets vanuit de klant heb gekregen om mee te knutselen, deze staan hieronder.
 
-![](/uploads/droomzomer-2.png)
+![](uploads/droomzomer-2.png)
 
 Ik zie mezelf namelijk als een designer, niet een kunstenaar. Een verzameling als deze iconenset is iets wat mij ontzettend uit zou dagen en ik verwacht dat ik hier ontzettend lang mee bezig zou zijn. Bovendien zou het er niet even mooi uitkomen. Maar: een webdesign ontwerpen met al deze artwork tot mijn beschikking is wel iets wat ik kan. 
 
@@ -48,7 +48,7 @@ Ik had ook de drie "afdelingen" van de website kleurgecodeerd:
 
 Ik had ook in mijn onderzoek gevonden dat veel soortgelijke website 'fancy' dividers hadden die onder titels stonden. Deze heb ik ook met kleurgecodeerd gemaakt met het juiste icoon erbij.
 
-<figure class="expand"><img src="/uploads/droomzomer-1.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-1.jpg"></figure>
 
 Als je naar beneden scrollt krijg je afbeeldingen te zien per afdeling. Tussen het zonnerijk en dizzeland zit een soort 'pad', die bij de landingpagina is ontstaan. Hier heb ik een fietser neergezet, waarvan het de bedoeling is dat deze meefietst afhankelijk van je scrollpositie. 
 
@@ -61,7 +61,7 @@ Bij deze stijloptie heb ik heel letterlijk genomen wat de klant in de briefing h
 
 Als landing is er een video die overfade in de website. De navigatie is nu met de logo aan de linkerzijde, in plaats van in het midden. De kleurcodering is eruitgehaald om de klant het verschil hierin te laten zien. Er zijn ook andere dividers gemaakt. 
 
-<figure class="expand"><img src="/uploads/droomzomer-2.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-2.jpg"></figure>
 
 Het concept is dat de titel + tekst + CTA sticky is, en er zo veel afbeeldingen als gewenst toegevoegd kunnen worden. Aan het einde wordt er gefade naar een witte footer, om ook een soort wolkachtig/dromerigheid uit te stralen. 
 
@@ -87,7 +87,7 @@ Toen ik bezig was met de rest van de website ontwerpen waren me een paar dingen 
 
 Op het ontwerp van de homepage is er nu ruimte voor meer dan 9 afbeeldingen, die dus niet eens van het festival zelf zullen zijn. Om deze reden heb ik de stijlkeuze nog aangepast. 
 
-<figure class="expand"><img src="/uploads/droomzomer-3.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-3.jpg"></figure>
 
 Deze keer heb ik per nieuwe afdeling een soort eiland gemaakt met alle artwork die ik daarbij vond passen. Zo heeft Muziek & Theater saxofoons, het "Welcome to the Theatre"-bord en een muziekhuis. Eten & Drinken lijkt op een soort outside food-court, en bij activiteiten staat het reuzenrad, een kabelbaan en een zweefmolen. 
 
@@ -95,37 +95,37 @@ Deze artworks gebruik ik ook uitvergroot op de verzamelpagina's van deze afdelin
 
 ### alle pagina's
 
-De rest van de uitgewerkte pagina's staan hieronder nog afgebeeld. Via [deze link](/uploads/droomzomer-6.pdf) kun je ook nog alles pagina's als PDF bekijken. Hieronder staan JPEG's en die kunnen wat kwaliteitsverlies hebben. 
+De rest van de uitgewerkte pagina's staan hieronder nog afgebeeld. Via [deze link](uploads/droomzomer-6.pdf) kun je ook nog alles pagina's als PDF bekijken. Hieronder staan JPEG's en die kunnen wat kwaliteitsverlies hebben. 
 
 _Homepage Mobile_
-<figure class="expand"><img src="/uploads/droomzomer-home-mobile.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-home-mobile.jpg"></figure>
 
 _Tickets_
-<figure class="expand"><img src="/uploads/droomzomer-tickets.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-tickets.jpg"></figure>
 
 _Programma_
-<figure class="expand"><img src="/uploads/droomzomer-programma.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-programma.jpg"></figure>
 
 _Info_
-<figure class="expand"><img src="/uploads/droomzomer-info.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-info.jpg"></figure>
 
 _Ontdek Collection Collection_
-<figure class="expand"><img src="/uploads/droomzomer-ontdek-collect-collect.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-ontdek-collect-collect.jpg"></figure>
 
 _Ontdek Collection_
-<figure class="expand"><img src="/uploads/droomzomer-ontdek-collect.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-ontdek-collect.jpg"></figure>
 
 _Ontdek Single_
-<figure class="expand"><img src="/uploads/droomzomer-ontdek-single.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-ontdek-single.jpg"></figure>
 
 _Post Collection_
-<figure class="expand"><img src="/uploads/droomzomer-posts.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-posts.jpg"></figure>
 
 _Post Single_
-<figure class="expand"><img src="/uploads/droomzomer-post.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-post.jpg"></figure>
 
 _Standard page_
-<figure class="expand"><img src="/uploads/droomzomer-page.jpg"></figure>
+<figure class="expand"><img src="uploads/droomzomer-page.jpg"></figure>
 
 ### Einde designfase
 

@@ -24,8 +24,8 @@ Dit ging echt top. Dit leerdoel was voor mezelf ook het meest concreet en hier k
 
 ### Ontwikkeling &nbsp;
 
-Ik merkte aan de start van mijn stage met [OpenHotelDag](/openhoteldag) dat ik Jekyll (Liquid) toch al behoorlijk onder de knie had. Het coderen in Hugo was echter wel echt weer vanaf 0 beginnen. Zoals ik al bij [project Basecamp](/basecamp) heb beschreven was ik daar begonnen met mijn eerste Hugo project. De templating die bij dit project van toepassing was niet erg geavanceerd, dus dat was lekker instappen. 
+Ik merkte aan de start van mijn stage met [OpenHotelDag](openhoteldag) dat ik Jekyll (Liquid) toch al behoorlijk onder de knie had. Het coderen in Hugo was echter wel echt weer vanaf 0 beginnen. Zoals ik al bij [project Basecamp](basecamp) heb beschreven was ik daar begonnen met mijn eerste Hugo project. De templating die bij dit project van toepassing was niet erg geavanceerd, dus dat was lekker instappen. 
 
-Hierna werd ik bij [mooivakonderwijs](/mooivakonderwijs) wel echt volledig in het diepe gegooid. Tijdens dit project heb ik veel kennis over Hugo vergaard, en ook nog een onverwachtse bak met PHP-backend geleerd. 
+Hierna werd ik bij [mooivakonderwijs](mooivakonderwijs) wel echt volledig in het diepe gegooid. Tijdens dit project heb ik veel kennis over Hugo vergaard, en ook nog een onverwachtse bak met PHP-backend geleerd. 
 
 Ik durf nu ook wel te zeggen dat ik ieder project in Hugo aankan. Ik ga ook Jekyll achter mij laten als de mogelijkheid hiervoor bestaat. Ik ben gaandeweg nog meer dingen over Hugo aan het leren en ik word er steeds efficiënter in.

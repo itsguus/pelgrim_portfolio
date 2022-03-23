@@ -4,7 +4,7 @@
 <section class="project">
     <article>
         <h1 id="top">{{ page.title }}</h1>
-        <a href="/#{{ page.title | slugify  }}" class="link back">Terug</a>
+        <a href="../index.html#{{ page.title | slugify  }}" class="link back">Terug</a>
         <ul class="links">
             {% for item in page.links  %}
                 <li><a target="_blank" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -15,8 +15,8 @@
                 <!-- Dynamically added -->
             </ul>
         </nav>
-        {{ content }}
-        <a class="link arr before" href="/">Back to home</a>
+        {{ content | replace: "uploads/", "../uploads/" }}
+        <a class="link arr before" href="../index.html">Back to home</a>
         <a class="link arr after up" href="#top">Back to top</a>
     </article>
 </section>

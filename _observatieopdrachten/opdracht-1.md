@@ -11,7 +11,7 @@ Ik ben als student heel erg benieuwd hoe ze dit bij Omelette Du Fromage doen. Ik
 
 ### Uitwerking &nbsp; &nbsp; &nbsp;
 
-Deze observatieopdracht is gevolgd bij het project [DB55](/db55/). Het startpunt van dit traject is na de bevestiging van de opdracht. Het voor-onderhandelen en de opdracht binnenhalen was hier al door Max gedaan zonder dat ik erbij was. 
+Deze observatieopdracht is gevolgd bij het project [DB55](db55/). Het startpunt van dit traject is na de bevestiging van de opdracht. Het voor-onderhandelen en de opdracht binnenhalen was hier al door Max gedaan zonder dat ik erbij was. 
 
 Ik heb een puntenopsomming gemaakt van de handelingen die zijn gedaan van het startpunt tot het opleveren. Er is in dit geval al sprake van een bestaande brandbook. 
 

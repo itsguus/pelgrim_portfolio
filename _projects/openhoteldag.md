@@ -5,12 +5,12 @@ links:
     - title: Website
       url: https://openhoteldag.com/
     - title: Jekyll programma template (raw)
-      url: /uploads/openhoteldag.txt
+      url: uploads/openhoteldag.txt
 ---
 
 Ik werd in de eerste week meteen in het diepe gegooid. Samen met Cris en Thomas van D/DOCK, een design community gelegen in de houthavens is het concept “Open Hotel Dag” neergezet. 
 
-![](/uploads/openhoteldag-2.png)
+![](uploads/openhoteldag-2.png)
 
 ### Aanpak
 
@@ -24,13 +24,13 @@ Ik was begonnen met het uitzoeken van welke data we per hotel nodig hadden om di
 
 De schets die ik had binnengekregen zag er zo uit:  
 
-![](/uploads/openhoteldag-1.png)
+![](uploads/openhoteldag-1.png)
 
 Dit is een voorbeeld van hoe een input van één hotel er aan de achterkant uitziet:
 
 ```yml
 - title: Kimpton De Witt
-  image: /uploads/kimpton-de-witt-exterior.jpg
+  image: uploads/kimpton-de-witt-exterior.jpg
   description_markdown: >-
     **Welkom bij Kimpton De Witt Amsterdam\!**
 
@@ -88,10 +88,10 @@ Na een hoop hoofdpijn en ellende ben is het wel allemaal gelukt. Op [deze link](
 Er kan ook gefilterd worden, waarna alle blokken met een transition verwijnen. Ik had hier gekozen om de breedtes en posities van de activiteiten static te coderen in Jekyll. Bij de [links bovenin](#top) kun je de jekyll template zien. 
 
 _Desktop versie_
-![](/uploads/ohd-3.png)
+![](uploads/ohd-3.png)
 
 _Mobiele versie_
-![](/uploads/ohd-4.png)
+![](uploads/ohd-4.png)
 
 _Javascript van de website_
 ```js
@@ -1038,9 +1038,9 @@ function giveTitlesBuurtName() {
 Op basis van deze gegevens krijgt een hotel zo een stip op de kaart, waarop geklikt kan worden om door te linken naar de individuele hotelpagina. Ik heb zelfs als easter egg nog een cloropleth-map gemaakt van de kaart (thanks, dataviz track). Hoe meer bolletjes in een bepaald stadsdeel, hoe meer opacity de buurt heeft op de kaart.
 
 _De interactieve kaart van Openhoteldag, fresh state_
-![](/uploads/ohd-5.png)
+![](uploads/ohd-5.png)
 
 _Kaart, geklikt op een buurt state_
-![](/uploads/ohd-6.png)
+![](uploads/ohd-6.png)
 
 Ik raad aan om [zelf even te kijken!](https://openhoteldag.com/hotels#scroll_to_map)

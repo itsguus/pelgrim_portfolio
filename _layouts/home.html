@@ -57,7 +57,7 @@
 {% for item in siteprojects %}
     <section class="project">
         <article>
-            <h2 id="{{ item.title | slugify }}"><a href="{{ item.url }}">project {{ item.title }}</a></h1>
+            <h2 id="{{ item.title | slugify }}"><a href="{{ item.url | replace: "/", "" | append: "/index.html" }}">project {{ item.title }}</a></h1>
             <ul class="links">
                 {% for i in item.links  %}
                     <li><a target="_blank" href="{{ i.url }}">{{ i.title }}</a></li>
@@ -80,15 +80,5 @@
     </section>
 {% endfor %}
 
-
-<!-- 
-    
-Bij reflectie iets over de merger met TADA
-Iets over kantoor verbouwen - dat dat teambuilding gaf 
-
-Wat ging niet goed - vergeten dat ik stage loop 
-
-
--->
 
 {% include footer.html %}
